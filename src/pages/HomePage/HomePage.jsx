@@ -1,4 +1,3 @@
-import AppBar from 'components/AppBar';
 import HALO from 'vanta/src/vanta.halo';
 import { useEffect } from 'react';
 import {

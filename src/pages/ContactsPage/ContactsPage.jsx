@@ -1,10 +1,4 @@
-import {
-  ContactTitle,
-  Message,
-  Phonebook,
-  Title,
-  Wrapper,
-} from './ContactsPage.styled';
+import { ContactTitle, Message, Phonebook, Title } from './ContactsPage.styled';
 import ContactForm from '../../components/ContactForm';
 import ContactList from '../../components/ContactList';
 import Filter from '../../components/Filter';
@@ -17,7 +11,6 @@ import {
   selectIsLoading,
 } from 'redux/contacts/selectors';
 import Loader from 'components/Loader/Loader';
-import AppBar from 'components/AppBar/AppBar';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
