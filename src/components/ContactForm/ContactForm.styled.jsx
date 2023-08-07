@@ -4,7 +4,7 @@ import { keyframes } from '@emotion/react';
 export const FormBox = styled.div`
   width: 400px;
   padding: 40px;
-  background: rgba(24, 20, 20, 0.987);
+  background: #e7eff8;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -24,7 +24,7 @@ export const Label = styled.label`
   left: 0;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
+  color: #898989;
   pointer-events: none;
   transition: 0.5s;
 `;
@@ -33,11 +33,11 @@ export const Input = styled.input`
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
+  color: #black;
   margin-bottom: 20px;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid black;
   outline: none;
   background-color: transparent;
   &:focus ~ label,
@@ -55,7 +55,7 @@ export const Button = styled.button`
   background-color: transparent;
   border: none;
   padding: 10px 20px;
-  color: #ffffff;
+  color: black;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -65,7 +65,7 @@ export const Button = styled.button`
   letter-spacing: 4px;
   cursor: pointer;
   &:hover {
-    background: #00bcd4;
+    background: #336aed;
     color: #fff;
     border-radius: 5px;
   }
@@ -89,7 +89,7 @@ export const Span = styled.span`
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #00bcd4);
+    background: linear-gradient(90deg, transparent, #336aed);
     animation: ${btnAnimation} 2s linear infinite;
   }
 `;

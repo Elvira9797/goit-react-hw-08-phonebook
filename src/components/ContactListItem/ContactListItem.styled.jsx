@@ -4,7 +4,7 @@ export const ListItem = styled.li`
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 2px solid #1b1717;
+  border: 2px solid ${props => props.theme.colors.lightBlue};
   border-radius: 5px;
   padding: 20px;
   justify-content: space-between;
@@ -51,15 +51,6 @@ export const Data = styled.p`
   margin: 0;
 `;
 
-export const LabelContainer = styled.label`
-  display: block;
-  position: relative;
-  cursor: pointer;
-  font-size: 20px;
-  user-select: none;
-  transition: 100ms;
-`;
-
 export const InputStyled = styled.input`
   position: absolute;
   opacity: 0;
@@ -74,17 +65,4 @@ export const InputStyled = styled.input`
 export const IconWrapper = styled.div`
   display: flex;
   gap: 5px;
-`;
-
-export const SvgStyled = styled.svg`
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 30px;
-  width: 30px;
-  transition: all 0.3s;
-  fill: #666;
-  &:hover {
-    transform: scale(1.1);
-  }
 `;

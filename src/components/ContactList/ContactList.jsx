@@ -5,28 +5,17 @@ import {
   selectContacts,
   selectFilter,
   selectStatusFilter,
-} from 'redux/selectors';
-import { statusFilters } from 'redux/constants';
-
-const getVisibleContacts = (contacts, statusFilter) => {
-  switch (statusFilter) {
-    case statusFilters.favourites:
-      return contacts.filter(contact => contact.favorite);
-    default:
-      return contacts;
-  }
-};
+} from 'redux/contacts/selectors';
+import { statusFilters } from 'redux/contacts/constants';
 
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
-  const statusFilter = useSelector(selectStatusFilter);
-  const visibleContacts = getVisibleContacts(contacts, statusFilter);
 
   const filterValue = useSelector(selectFilter);
 
   const getFilteredContacts = () => {
     const formatedFiltered = filterValue.toLowerCase();
-    return visibleContacts.filter(({ name }) =>
+    return contacts.filter(({ name }) =>
       name.toLowerCase().includes(formatedFiltered)
     );
   };

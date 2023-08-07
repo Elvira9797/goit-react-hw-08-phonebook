@@ -7,10 +7,12 @@ export const Label = styled.label`
   font-size: 18px;
   font-weight: 500;
   gap: 5px;
+  color: white;
 `;
 
 export const Input = styled.input`
-  border-bottom: 1px solid #d6d6d6;
+  border-bottom: 1px solid #6f6f70;
+  color: white;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -18,7 +20,7 @@ export const Input = styled.input`
   width: 300px;
   border-radius: 0;
   margin-bottom: 15px;
-  background-color: #e8e8e8;
+  background-color: #010620;
   transition: border-bottom 0.3s ease-in-out;
   &:focus {
     outline: none;

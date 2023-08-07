@@ -12,8 +12,8 @@ import {
   Span,
 } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { addContact } from '../../redux/contacts/operations';
+import { selectContacts } from '../../redux/contacts/selectors';
 import { Form } from 'formik';
 
 const ContactForm = () => {
@@ -53,6 +53,9 @@ const ContactForm = () => {
     }
 
     dispatch(addContact({ name: values.name, number: values.number }));
+    Notiflix.Notify.success(
+      `${values.name} has been added to your contacts list.`
+    );
     resetForm();
   };
 
