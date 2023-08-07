@@ -139,6 +139,7 @@ export const Login = styled.button`
   font-weight: bold;
   color: #0066ff;
   transition: color 0.3s ease;
+  padding: 3px;
   &:hover {
     color: #005ce6;
     text-decoration: underline;

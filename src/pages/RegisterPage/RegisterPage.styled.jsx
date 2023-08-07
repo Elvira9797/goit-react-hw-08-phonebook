@@ -6,10 +6,13 @@ export const AnimatedBg = styled.div`
   padding-top: 80px;
   box-sizing: border-bor;
   flex-direction: row-reverse;
-  justifycontent: 'space-around';
+  justify-content: space-around;
   @media (max-width: 1120px) {
     flex-direction: column;
-    justifycontent: 'flex-start';
+  }
+  @media (max-width: 590px) {
+    flex-direction: initial;
+    padding-top: 100px;
   }
 `;
 

@@ -3,13 +3,17 @@ import styled from '@emotion/styled';
 export const AnimatedBg = styled.div`
   display: flex;
   padding: 20px;
+  height: 100vh;
   padding-top: 80px;
   box-sizing: border-bor;
   flex-direction: row-reverse;
-  justifycontent: 'space-around';
+  justify-content: space-around;
   @media (max-width: 1120px) {
     flex-direction: column;
-    justifycontent: 'flex-start';
+  }
+  @media (max-width: 590px) {
+    flex-direction: initial;
+    padding-top: 100px;
   }
 `;
 

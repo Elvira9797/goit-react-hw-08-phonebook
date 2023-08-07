@@ -24,10 +24,7 @@ const RegisterPage = () => {
   });
 
   return (
-    <AnimatedBg
-      id="animateBg"
-      style={{ height: '100vh', justifyContent: 'space-around' }}
-    >
+    <AnimatedBg id="animateBg" style={{ height: '100vh' }}>
       <RegisterForm />
       <Benefits>
         <RegisterTitle>

@@ -17,10 +17,7 @@ const LoginPage = () => {
     });
   });
   return (
-    <AnimatedBg
-      id="animateBg"
-      style={{ height: '100vh', justifyContent: 'space-around' }}
-    >
+    <AnimatedBg id="animateBg">
       <LoginForm />
       <Benefits>
         <RegisterTitle>Welcome to your Contacts Book!</RegisterTitle>
