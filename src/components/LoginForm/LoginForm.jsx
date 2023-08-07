@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Formik, Field, ErrorMessage } from 'formik';
-import Notiflix from 'notiflix';
+
 import * as Yup from 'yup';
 import {
   Label,
@@ -9,7 +9,6 @@ import {
   Div,
   FormBox,
   ContactBox,
-  Span,
   InputEmail,
   Login,
   FormTitle,

@@ -1,5 +1,6 @@
 import RegisterForm from '../../components/RegisterForm/RegisterForm';
-import HALO from 'vanta/src/vanta.halo';
+import HALO from 'vanta/dist/vanta.halo.min';
+
 import { useEffect } from 'react';
 import {
   AnimatedBg,
