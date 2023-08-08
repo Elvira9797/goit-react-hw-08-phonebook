@@ -28,11 +28,7 @@ const contactsSlice = createSlice({
     [fetchContacts.fulfilled](state, action) {
       state.contacts.isLoading = false;
       state.contacts.error = null;
-      const newArray = action.payload.map(element => {
-        return { ...element, isFavorite: false };
-      });
-      state.contacts.items.push(action.payload);
-      state.contacts.items = newArray;
+      state.contacts.items = action.payload;
     },
     [fetchContacts.rejected]: handleRejected,
     [addContact.pending]: handlePending,
@@ -40,7 +36,7 @@ const contactsSlice = createSlice({
       state.contacts.isLoading = false;
       state.contacts.error = null;
 
-      state.contacts.items.push({ ...action.payload, isFavorite: false });
+      state.contacts.items.push(action.payload);
     },
     [addContact.rejected]: handleRejected,
     [deleteContact.pending]: handlePending,
