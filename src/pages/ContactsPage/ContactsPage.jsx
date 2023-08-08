@@ -30,7 +30,7 @@ const ContactsPage = () => {
       <ContactTitle>Contacts</ContactTitle>
       <Filter />
       {isLoading && !error && <Loader />}
-      {contacts.length > 0 ? (
+      {contacts?.length > 0 ? (
         <ContactList />
       ) : (
         <Message>You don't have any contacts</Message>

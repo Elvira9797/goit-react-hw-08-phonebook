@@ -29,4 +29,5 @@ export const ContactTitle = styled.h2`
 
 export const Message = styled.p`
   font-size: 18px;
+  corol: white;
 `;
