@@ -13,3 +13,11 @@ export const Created = styled.p`
   justify-content: center;
   gap: 4px;
 `;
+
+export const LinkStyled = styled.a`
+  color: #b0b7bd;
+  transition: color 250ms ease;
+  &:hover {
+    color: #5333ed;
+  }
+`;
