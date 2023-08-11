@@ -15,9 +15,8 @@ export const Phonebook = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #010620;
   padding-bottom: 50px;
-  padding-top: 100px;
+  padding-top: 50px;
   width: 100vw;
   min-height: 100vh;
 `;
@@ -29,5 +28,5 @@ export const ContactTitle = styled.h2`
 
 export const Message = styled.p`
   font-size: 18px;
-  corol: white;
+  color: white;
 `;

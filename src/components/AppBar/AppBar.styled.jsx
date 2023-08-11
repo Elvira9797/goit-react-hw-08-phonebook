@@ -1,10 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Header = styled.header`
-  position: absolute;
-  z-index: 1000;
-  width: 100%;
-  border-bottom: 1px solid #2a363b;
+  border-bottom: 1px solid ${props => props.theme.colors.lightBlue};
   padding: 8px;
   box-sizing: border-box;
 `;

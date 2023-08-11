@@ -19,6 +19,33 @@ export const ListItem = styled.li`
   }
 `;
 
+export const IconWrapper = styled.div`
+  display: flex;
+`;
+
+export const ButtonStyledCancel = styled.button`
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #f44336;
+  transition: background-color 250ms ease;
+  &:hover,
+  &:active {
+    background-color: rgb(124 139 171 / 15%);
+  }
+`;
+
 export const ButtonStyled = styled.button`
   display: flex;
   align-items: center;
@@ -35,7 +62,7 @@ export const ButtonStyled = styled.button`
   transition: background-color 250ms ease;
   &:hover,
   &:active {
-    background-color: #e2e5e8;
+    background-color: rgb(124 139 171 / 15%);
   }
 `;
 
@@ -51,18 +78,15 @@ export const Data = styled.p`
   margin: 0;
 `;
 
-export const InputStyled = styled.input`
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-  &:checked ~ svg {
-    fill: #e3474f;
-  }
-`;
-
-export const IconWrapper = styled.div`
-  display: flex;
-  gap: 5px;
+export const Input = styled.input`
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #black;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+  outline: none;
+  background-color: transparent;
 `;

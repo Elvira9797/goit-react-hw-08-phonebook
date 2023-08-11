@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import { Formik, Field, ErrorMessage } from 'formik';
-
 import * as Yup from 'yup';
 import {
   Label,
-  Button,
-  Input,
-  Div,
-  FormBox,
-  ContactBox,
-  InputEmail,
-  FormTitle,
-  Subtitle,
   Login,
   Question,
-} from './RegisterForm.styled';
+  FormBox,
+  FormTitle,
+  Subtitle,
+  InputEmail,
+  Input,
+  ContactBox,
+  Button,
+  Div,
+} from '../LoginForm/LoginForm.styled';
 import { Form } from 'formik';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/authOperations';

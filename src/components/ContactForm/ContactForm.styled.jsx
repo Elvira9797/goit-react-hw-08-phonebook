@@ -12,6 +12,9 @@ export const FormBox = styled.div`
   @media (max-width: 420px) {
     max-width: 100%;
   }
+  @media (max-width: 1120px) {
+    margin: 0 auto;
+  }
 `;
 
 export const ContactBox = styled.div`

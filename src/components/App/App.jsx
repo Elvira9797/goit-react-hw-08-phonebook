@@ -8,6 +8,7 @@ import RestrictedRoute from 'components/RestrictedRoute';
 import { selectIsRefreshing } from 'redux/auth/authSelectors';
 import { Oval } from 'react-loader-spinner';
 import { Loader } from './App.styled';
+import NotFound from 'pages/NotFound';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 const RegisterPage = lazy(() => import('pages/RegisterPage/RegisterPage'));
@@ -17,7 +18,6 @@ const ContactsPage = lazy(() => import('pages/ContactsPage/ContactsPage'));
 const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
-  console.log(isRefreshing);
 
   useEffect(() => {
     dispatch(fetchCurrentUser());
@@ -64,6 +64,7 @@ const App = () => {
           }
         />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

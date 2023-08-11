@@ -11,6 +11,7 @@ import {
   selectIsLoading,
 } from 'redux/contacts/selectors';
 import Loader from 'components/Loader/Loader';
+import ScrollToTopButton from 'components/ScrollToTopButton/ScrollToTopButton';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ const ContactsPage = () => {
       ) : (
         <Message>You don't have any contacts</Message>
       )}
+      <ScrollToTopButton />
     </Phonebook>
   );
 };
