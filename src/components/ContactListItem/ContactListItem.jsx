@@ -28,8 +28,8 @@ const ContactListItem = ({ contact }) => {
   const selectedContact = useSelector(selectSelectedContact);
   const isOpen = useSelector(selectModalIsOpen);
 
-  const handleDelete = () => {
-    dispatch(deleteContact(contact.id));
+  const handleDelete = async () => {
+    await dispatch(deleteContact(contact.id));
     Notiflix.Notify.success(`The contact was successfully deleted.`);
   };
   const openModal = () => {
@@ -40,13 +40,13 @@ const ContactListItem = ({ contact }) => {
     dispatch(toggleModal());
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = async event => {
     event.preventDefault();
 
     const name = event.target.elements.name.value;
     const number = event.target.elements.number.value;
 
-    dispatch(
+    await dispatch(
       updateContact({
         contactId: selectedContact.id,
         name,

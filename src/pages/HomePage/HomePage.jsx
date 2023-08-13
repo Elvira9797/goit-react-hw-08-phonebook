@@ -1,5 +1,6 @@
 import HALO from 'vanta/src/vanta.halo';
 import { useEffect } from 'react';
+import { useAuth } from '../../hooks/useAuth';
 import {
   AnimatedBg,
   Button,
@@ -27,13 +28,15 @@ const HomePage = () => {
   });
 
   const navigate = useNavigate();
+  const { isLoggedIn } = useAuth();
 
   const handleLoginClick = event => {
-    console.dir(event.target.name);
     if (event.target.name === 'login') {
       navigate('/login');
-    } else {
+    } else if (event.target.name === 'register') {
       navigate('/register');
+    } else {
+      navigate('/contacts');
     }
   };
 
@@ -50,12 +53,20 @@ const HomePage = () => {
           Book helps you stay connected and organized.
         </SubTitle>
         <ButtonWrapper>
-          <Button name="register" onClick={handleLoginClick}>
-            Register
-          </Button>
-          <Button name="login" onClick={handleLoginClick}>
-            Login
-          </Button>
+          {isLoggedIn ? (
+            <Button name="contacts" onClick={handleLoginClick}>
+              Your contact book
+            </Button>
+          ) : (
+            <>
+              <Button name="register" onClick={handleLoginClick}>
+                Register
+              </Button>
+              <Button name="login" onClick={handleLoginClick}>
+                Login
+              </Button>
+            </>
+          )}
         </ButtonWrapper>
       </Wrapper>
     </AnimatedBg>

@@ -44,7 +44,7 @@ const ContactForm = () => {
     return contacts.find(contacts => contacts.name === name);
   };
 
-  const handleSubmit = (values, { resetForm }) => {
+  const handleSubmit = async (values, { resetForm }) => {
     const isExist = checkExistContact(values.name);
     if (isExist) {
       Notiflix.Notify.failure(`${values.name} is already in contacts`);
@@ -52,7 +52,7 @@ const ContactForm = () => {
       return;
     }
 
-    dispatch(addContact({ name: values.name, number: values.number }));
+    await dispatch(addContact({ name: values.name, number: values.number }));
     Notiflix.Notify.success(
       `${values.name} has been added to your contacts list.`
     );
