@@ -4,7 +4,6 @@ export const AnimatedBg = styled.div`
   display: flex;
   padding: 20px;
   height: 100vh;
-  padding-top: 80px;
   box-sizing: border-bor;
   flex-direction: row-reverse;
   justify-content: space-around;

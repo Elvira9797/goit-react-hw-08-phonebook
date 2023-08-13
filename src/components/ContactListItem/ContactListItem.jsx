@@ -54,8 +54,8 @@ const ContactListItem = ({ contact }) => {
       })
     );
 
-    Notiflix.Notify.success(`The contact was successfully update.`);
     dispatch(toggleModal());
+    Notiflix.Notify.success(`The contact was successfully update.`);
   };
 
   return (
